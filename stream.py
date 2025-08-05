@@ -51,8 +51,8 @@ input_data = pd.DataFrame({
     'ALP': [ALP],
     'T': [T],
     'PSA_density': [PSA_density],
-    'fPSA': [fPSA],       # 新增变量
-    'AST': [AST]          # 新增变量
+    'fPSA': [fPSA],      
+    'AST': [AST]          
 })
 
 # Prediction and results
