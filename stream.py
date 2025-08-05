@@ -33,7 +33,7 @@ with st.sidebar:
                   help="Alkaline phosphatase level")
     
     # 新增变量 fPSA
-    fPSA = st.slider("fPSA (ng/mL)", min_value=0.0, max_value=50.0, value=1.0, step=0.1,
+    fPSA = st.slider("fPSA (ng/mL)", min_value=0.0, max_value=250.0, value=1.0, step=0.1,
                    help="Free prostate-specific antigen level")
     
     # 新增变量 AST
@@ -86,7 +86,6 @@ with col2:
         - N status: {'Positive' if N > 0 else 'Negative'} nodes
         - PSA density: {'Elevated' if PSA_density > 0.15 else 'Normal'}
         - ALP: {'Elevated' if ALP > 130 else 'Normal'}
-        - fPSA: {'Elevated' if fPSA > 4.0 else 'Normal'}  # 新增评估
         - AST: {'Elevated' if AST > 40 else 'Normal'}     # 新增评估
         - ECOG PS: {[
             'Asymptomatic (0)', 
@@ -102,8 +101,7 @@ with col2:
             'T Stage': T/4,
             'N Status': N/3,
             'PSA Density': min(PSA_density/0.15, 1),
-            'ALP': min(ALP/130, 1),
-            'fPSA': min(fPSA/4.0, 1),   # 新增，4.0 ng/mL为临床阈值
+            'ALP': min(ALP/130, 1),  
             'AST': min(AST/40, 1),      # 新增，40 U/L为正常上限
             'ECOG PS': ECOG_PS/4
         }
