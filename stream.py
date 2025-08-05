@@ -86,7 +86,7 @@ with col2:
         - N status: {'Positive' if N > 0 else 'Negative'} nodes
         - PSA density: {'Elevated' if PSA_density > 0.15 else 'Normal'}
         - ALP: {'Elevated' if ALP > 130 else 'Normal'}
-        - AST: {'Elevated' if AST > 40 else 'Normal'}     # 新增评估
+        - AST: {'Elevated' if AST > 40 else 'Normal'}    
         - ECOG PS: {[
             'Asymptomatic (0)', 
             'Symptomatic but ambulatory (1)', 
@@ -102,12 +102,12 @@ with col2:
             'N Status': N/3,
             'PSA Density': min(PSA_density/0.15, 1),
             'ALP': min(ALP/130, 1),  
-            'AST': min(AST/40, 1),      # 新增，40 U/L为正常上限
+            'AST': min(AST/40, 1),      
             'ECOG PS': ECOG_PS/4
         }
         st.bar_chart(pd.DataFrame.from_dict(
             {'Risk Contribution': risk_factors}), 
-            height=350  # 增加高度以适应新变量
+            height=350  
         )
 
 # Guidelines and references
