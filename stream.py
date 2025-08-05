@@ -27,7 +27,7 @@ with st.sidebar:
                  help="N0: No regional lymph node metastasis, N1: Regional lymph node metastasis")
     
     st.subheader("Laboratory Values")
-    PSA_density = st.slider("PSA Density (ng/mL/mL)", min_value=0.0, max_value=50.0, value=0.1, step=0.1,
+    PSA_density = st.slider("PSA Density (ng/mL)", min_value=0.0, max_value=50.0, value=0.1, step=0.1,
                           help="Serum PSA divided by prostate volume")
     ALP = st.slider("ALP (U/L)", min_value=0, max_value=1100, value=100, step=1,
                   help="Alkaline phosphatase level")
