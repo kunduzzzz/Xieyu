@@ -88,11 +88,11 @@ with col2:
         - ALP: {'Elevated' if ALP > 130 else 'Normal'}
         - AST: {'Elevated' if AST > 40 else 'Normal'}    
         - ECOG PS: {[
-            'Asymptomatic (0)', 
-            'Symptomatic but ambulatory (1)', 
-            '<50% in bed (2)', 
-            '>50% in bed (3)', 
-            'Bedbound (4)'
+            'Asymptomatic', 
+            'Symptomatic but ambulatory', 
+            '<50% in bed ', 
+            '>50% in bed ', 
+            'Bedbound '
         ][ECOG_PS]}
         """)
         
