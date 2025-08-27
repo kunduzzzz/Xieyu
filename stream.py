@@ -62,7 +62,7 @@ with col1:
     if st.button("Calculate Risk"):
         # 概率预测
         prob = model.predict_proba(input_data)[0][1]
-        risk_level = "High" if prob >= 0.6 else "Intermediate" if prob >= 0.3 else "Low"
+        risk_level = "High" if prob >= 0.6 else "Intermediate" if prob >= 0.4 else "Low"
         
         # 显示结果
         st.subheader("Risk Assessment")
